@@ -1,45 +1,48 @@
 import React from 'react'
-import { motion } from "motion/react"
+import Button1 from './Components/Button1'
+import Button2 from './Components/Button2'
+import FramerMotionAnimate from './Components/FramerMotionAnimate'
+import { motion } from 'motion/react'
 const App = () => {
   return (
-    <div className='h-screen w-full bg-neutral-950 text-white flex justify-center items-center'
+  
+    <div className='bg-neutral-950 text-white'
     style={{
       backgroundImage: 'radial-gradient(circle at 0.5px 0.5px , rgba(90,110,114,0.7) 1px , transparent 0.5px)',
       backgroundSize: "10px 10px",
       backgroundRepeat : "repeat"
-    }}>
-      <motion.button 
-        // initial={{
-        //   rotate : 0,
-        // }}
-        // animate={{
-        //   rotate: [0 , 10 , 0],
+    }}
+    >
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: -1000,
           
-        // }}
-        // transition={{
-        //   duration : 0.6,
-        //   delay: 0.1,
-        //   ease: 'easeInOut'
-        // }}
-
-        whileHover={{
-          // rotate: [0 , 20 , 0]
-          rotateX: 25,
-          rotateY : 10,
-          boxShadow : "0px 20px 50px rgba(8 , 112, 184,0.8)"      
         }}
-        style={{
-          translateZ : 100
+        animate={{
+          opacity: 1,
+          x: 0,
+          
         }}
         transition={{
-          duration: 0.4
+          duration: 1.5,
+          delay: 1
         }}
+    className='px-10 py-10 h-screen w-full'
+        >
+          <motion.div
+            
+          className='flex justify-center gap-10'>
+            <Button1 />
+            <Button2 />
+          </motion.div>
 
-        className='group relative bg-black px-28 py-6 rounded-xl font-bold cursor-pointer shadow-[0px_1px_2px_0px_rgba(255 ,255 ,255 , 0.1)_inset ,0px_-1px_2px_0px_rgba(255 , 255 , 255 , 0.1)_inset]'>Framer Motion
-        <span className='inline-block absolute inset-x-0 bottom-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-[2px] w-3/4 mx-auto'></span>
-        <span className='absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-x-0 bottom-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-[6px] w-3/4 mx-auto blur-sm'></span>
-      </motion.button>
+          <div className='py-20'>
+            <FramerMotionAnimate />
+          </div>
+        </motion.div>
     </div>
+      
   )
 }
 
