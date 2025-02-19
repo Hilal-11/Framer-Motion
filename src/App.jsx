@@ -2,11 +2,15 @@ import React from 'react'
 import Button1 from './Components/Button1'
 import Button2 from './Components/Button2'
 import FramerMotionAnimate from './Components/FramerMotionAnimate'
+import LoadingBar from './Components/LoadingBar'
+import Keyframes from './Components/Keyframes'
 import { motion } from 'motion/react'
+import Gusters from './Components/Gusters'
+import DragableBox from './Components/DragableBox'
 const App = () => {
   return (
   
-    <div className='bg-neutral-950 text-white'
+    <div className='h-[2000px] bg-neutral-950 text-white'
     style={{
       backgroundImage: 'radial-gradient(circle at 0.5px 0.5px , rgba(90,110,114,0.7) 1px , transparent 0.5px)',
       backgroundSize: "10px 10px",
@@ -39,6 +43,19 @@ const App = () => {
 
           <div className='py-20'>
             <FramerMotionAnimate />
+          </div>
+
+          <div>
+            <LoadingBar />
+          </div>
+          <div>
+            <Keyframes/>
+          </div>
+          <div>
+            <Gusters/>
+          </div>
+          <div>
+            <DragableBox />
           </div>
         </motion.div>
     </div>
