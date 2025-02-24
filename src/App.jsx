@@ -7,6 +7,7 @@ import Keyframes from './Components/Keyframes'
 import { motion } from 'motion/react'
 import Gusters from './Components/Gusters'
 import DragableBox from './Components/DragableBox'
+import Card from './Components/Card'
 const App = () => {
   return (
   
@@ -17,6 +18,7 @@ const App = () => {
       backgroundRepeat : "repeat"
     }}
     >
+    <div>
       <motion.div
         initial={{
           opacity: 0,
@@ -58,6 +60,11 @@ const App = () => {
             <DragableBox />
           </div>
         </motion.div>
+      </div>
+        
+        <div className='my-[32rem]'>
+          <Card/>
+        </div>
     </div>
       
   )
