@@ -8,10 +8,11 @@ import { motion } from 'motion/react'
 import Gusters from './Components/Gusters'
 import DragableBox from './Components/DragableBox'
 import Card from './Components/Card'
+import Ourcastration from './Components/Ourcastration'
 const App = () => {
   return (
   
-    <div className='h-[2000px] bg-neutral-950 text-white'
+    <div className='h-[4000px] bg-neutral-950 text-white'
     style={{
       backgroundImage: 'radial-gradient(circle at 0.5px 0.5px , rgba(90,110,114,0.7) 1px , transparent 0.5px)',
       backgroundSize: "10px 10px",
@@ -34,7 +35,7 @@ const App = () => {
           duration: 1.5,
           delay: 1
         }}
-    className='px-10 py-10 h-screen w-full'
+    className='px-10 py-10 h-auto w-full'
         >
           <motion.div
             
@@ -62,9 +63,12 @@ const App = () => {
         </motion.div>
       </div>
         
-        <div className='my-[32rem]'>
+        <div className=''>
           <Card/>
         </div>
+      <div className='my-20'> 
+        <Ourcastration />
+      </div>
     </div>
       
   )
