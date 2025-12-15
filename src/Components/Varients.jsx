@@ -13,16 +13,31 @@ function Varients() {
             height: "0",
         }
     }
-
-    const childVarient = {
+    const parentVarient = {
         open: {
-            opacity: 1,
-            x: 0,
-        },
+            transition: {
+                staggerChildren: 0.07,
+                delayChildren: 0.2
+            }
+        },  
         close: {
-            opacity: 0,
-            x: -20,
+             transition: {
+                staggerChildren: 0.05,
+                delayChildren: 0.1,
+            }
         }
+    }
+    const childVarient = {
+         close: {
+            opacity: 0,
+            x: -10
+        },
+        open: {
+            opacity: 1, 
+            x: 0
+            
+        }
+       
     }
 
 
@@ -69,18 +84,20 @@ function Varients() {
                 transition={{ duration: 0.3 }}
                 exit={"close"}
              className='flex justify-center items-center overflow-hidden px-4'>
-            <ul className='flex flex-col space-y-3 w-full'>
+            <motion.ul
+             variants={parentVarient}
+             className='flex flex-col space-y-3 w-full'>
                 {
                     menuItems.map((item) => (
                         <motion.li key={item.id}
                             variants={childVarient}
-                            transition={{ duration: 0.6}}
+                            transition={{ duration: 0.98}}
                             className='bg-white py-1 shadow-sm rounded-sm px-4 w-full'>
                             {item.menuItem}
                         </motion.li>
                     ))
                 }
-            </ul>
+            </motion.ul>
         </motion.nav>
     </div>
   )

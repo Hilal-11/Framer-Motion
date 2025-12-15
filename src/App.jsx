@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Button1 from './Components/Button1'
 import Button2 from './Components/Button2'
 import FramerMotionAnimate from './Components/FramerMotionAnimate'
@@ -8,8 +8,8 @@ import { motion } from 'motion/react'
 import Gusters from './Components/Gusters'
 import DragableBox from './Components/DragableBox'
 import Card from './Components/Card'
-import Ourcastration from './Components/Ourcastration'
 import Varients from './Components/Varients'
+import BantoClerk from './Components/BantoClerk'
 const App = () => {
   return (
   
@@ -69,6 +69,11 @@ const App = () => {
         </div>
         <div>
           <Varients />
+        </div>
+
+
+        <div className='w-full h-[1024px] bg-neutral-800'>
+          <BantoClerk/>
         </div>
     </div>
       
