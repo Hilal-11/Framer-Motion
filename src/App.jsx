@@ -9,6 +9,7 @@ import Gusters from './Components/Gusters'
 import DragableBox from './Components/DragableBox'
 import Card from './Components/Card'
 import Ourcastration from './Components/Ourcastration'
+import Varients from './Components/Varients'
 const App = () => {
   return (
   
@@ -66,9 +67,9 @@ const App = () => {
         <div className=''>
           <Card/>
         </div>
-      <div className='my-20'> 
-        <Ourcastration />
-      </div>
+        <div>
+          <Varients />
+        </div>
     </div>
       
   )
